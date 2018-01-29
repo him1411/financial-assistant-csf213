@@ -1,11 +1,19 @@
-<<<<<<< HEAD
+
 ### Notes, Articles, documents, links,etc
 
 ##### 	Folders/some way to club the notes together	
 
 ##### 	Sticky Notes
 
-### Events Mangememt
+### Events Mangement
+
+Date/Time
+
+Description
+
+Tags
+
+Priority/Color coding
 
 ### Finance Management 
 
@@ -19,22 +27,16 @@
 
 ##### 	Summary
 
-### Project Management
+### <Project Management>
 
 ### Reading List
 
 ### Kanban, priority ordering
 
-### Goals
-=======
-1. Notes, Articles, documents, links,etc
-2. EVents Mangememt
-3. Finance Management 
-4. Project Management
-5. Reading List
-6. Kanban, priority ordering
-7. Goals
->>>>>>> master
+Date/Time association
 
+Sub items, checklist..
+
+### <Goals>
 
 
