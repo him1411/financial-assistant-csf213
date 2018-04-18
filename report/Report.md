@@ -1,6 +1,6 @@
 # Introduction
 
-This document exists to specify the software requirements of a Personal Management web application, named . The primary purpose of the system is to provide the user with a set of tools via a central dashboard so as to facilitate the management of his day to day activities. The document is intended to provide the user with a comprehensive overview of the features of the application, as well as to specify the characteristics, constraints and assumptions related to the application. 
+This document exists to specify the software requirements of a Personal Management web application. The primary purpose of the system is to provide the user with a set of tools via a central dashboard so as to facilitate the management of his day to day activities. The document is intended to provide the user with a comprehensive overview of the features of the application, as well as to specify the characteristics, constraints and assumptions related to the application. 
 
 # Application Requirements 
 
@@ -38,6 +38,8 @@ Notes are there for the user to jot down information to be accessed later. Notes
 
 ### 4. To do Lists
 To do lists are in the form of checklists, each item can contain many subitems and they have priority ordering. We use Kanban Board to help the user manage their tasks.
+
+
 # Characteristics
 
 ### 1. Deployment
@@ -54,6 +56,8 @@ Everything is accessible easily from the main dashboard.
 
 ### 4. Protection of sensitive data
 This is a multiuser environment, hence the protection of sensitive data is necessary.
+
+
 # Constraints and Assumptions
 
  The user has an access to a web browser for connecting to the application.
