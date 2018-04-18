@@ -1,0 +1,71 @@
+<%= form_for @transaction, :html => { :class => "form-horizontal transaction" } do |f| %>
+
+  <% if @transaction.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@transaction.errors.count, "error") %> prohibited this transaction from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @transaction.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :amount, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :amount, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:amount) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :txn_type, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+
+      <%= f.text_field :txn_type,  :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:txn_type) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :bank_id, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.collection_select(:bank_id, current_user.banks, :id, :name, :class => 'form-control') %>
+    </div>
+    <%=f.error_span(:bank_id) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :desc, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :desc, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:desc) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :date, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.datetime_field :date, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:date) %>
+  </div>
+  
+  <div class="form-group">
+    <%= f.label :budget_id, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.collection_select(:budget_id, current_user.budgets, :id, :name, :class => 'form-control') %>
+    </div>
+    <%=f.error_span(:budget_id) %>
+  </div>
+
+  <div class="form-group">
+    <div class="col-lg-offset-2 col-lg-10">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                transactions_path, :class => 'btn btn-default' %>
+    </div>
+  </div>
+
+<% end %>

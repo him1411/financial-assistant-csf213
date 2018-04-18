@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  desc: MyText
+  mark: false
+  priority: 1
+  parent: MyString
+  child: MyString
+  user: one
+  list: one
+
+two:
+  name: MyString
+  desc: MyText
+  mark: false
+  priority: 1
+  parent: MyString
+  child: MyString
+  user: two
+  list: two

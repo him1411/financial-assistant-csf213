@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  amount: 1.5
+  name: MyString
+  start_date: 2018-04-15 22:09:29
+  end_date: 2018-04-15 22:09:29
+  desc: MyText
+  user: one
+
+two:
+  amount: 1.5
+  name: MyString
+  start_date: 2018-04-15 22:09:29
+  end_date: 2018-04-15 22:09:29
+  desc: MyText
+  user: two

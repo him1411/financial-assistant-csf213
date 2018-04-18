@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  amount: 1.5
+  type: false
+  source: MyString
+  desc: MyText
+  date: 2018-04-15 22:10:48
+  user: one
+  budget: one
+
+two:
+  amount: 1.5
+  type: false
+  source: MyString
+  desc: MyText
+  date: 2018-04-15 22:10:48
+  user: two
+  budget: two

@@ -1,0 +1,71 @@
+<h1>Finance Summary</h1>
+<h2>Current Budget</h2>
+<table class="table table-striped">
+  <thead>
+    <tr>
+
+      <th>Name</th>
+      <th>Amount</th>
+      <th>Pending Balance</th>
+      <th>End Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% current_user.budgets.each do |bud| %>
+      <tr>
+
+        <td><%= bud.name %></td>
+        <td><%= bud.amount %></td>
+        <% bud.pending = bud.amount %>
+        <% current_user.transactions.each do |t| %>
+        <% if t.budget == bud %>
+        	<% if t.txn_type == 'Debit' %>
+        	<% bud.pending = bud.pending - t.amount %>
+        	<% end %>
+        <% end %>
+        <% end %>
+        <td><%= bud.pending %></td>
+        
+        <td><%= bud.end_date %></td>
+
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+
+
+<h2>Bank Accounts</h2>
+<table class="table table-striped">
+  <thead>
+    <tr>
+
+      <th>Bank Name</th>
+      <th>Nick</th>
+      <th>Account Number</th>
+      <th>Balance</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% current_user.banks.each do |bank| %>
+      <tr>
+		<% pending = bank.balance %>
+    	<% bank.transactions.each do |t| %>
+      		<% if t.txn_type == 'Debit' %>
+        		<% pending = pending - t.amount %>
+      		<% else %>
+        		<% pending = pending + t.amount %>
+      		<% end %>
+    	<% end %>
+        <td><%= bank.name %></td>
+        <td><%= bank.nick %></td>
+        <td><%= bank.number %></td>
+        <td><%= pending %></td>
+
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
